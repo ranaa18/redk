@@ -1,0 +1,138 @@
+/* global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*end global rules*/
+
+/*srat body */
+body{
+    background: url("../images/bg2.jpg") no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+/*end body */
+
+/* start "patient or doctor" */
+
+.container {
+    
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+    padding-left: 200px
+    
+   
+}
+
+
+
+.container .box {
+    position: relative;
+    width: calc(370px - 30px);
+    height: calc(300px - 30px);
+    background:#d1d1d1;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .box .icon {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #989898;
+    transition: 0.5s;
+    z-index: 1;
+}
+.container .box:hover .icon
+{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .box .icon .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.container .box:hover .icon .fas {
+    font-size: 40px;
+}
+.container .box .content{
+    position: absolute;
+    top: 100%;
+    height: clac(100% - 100px);
+    text-align: center;
+    padding: 20%;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+    font-size: 20px;
+    padding: 40px;
+}
+.container .box:hover .content{
+    top: 100px;
+    opacity: 1;
+
+}
+.container .box:hover .content b{
+    color:black;
+    line-height: 1.6;
+}
+
+/* end "patient or doctor" */
+
+/*start responsive */
+
+/* for small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+    .container .box {
+        width: calc(370px - 30px);
+        height: calc(300px - 30px);
+    }
+}
+
+/*for medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 992px;
+    }
+    .container .box {
+        width: calc(370px - 30px);
+        height: calc(300px - 30px);
+    }
+}
+
+/*for larg */
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px;
+        
+    }
+    .container .box {
+        width: calc(370px - 30px);
+    height: calc(300px - 30px);
+    }
+}
+
+
+/*end responsive*/
